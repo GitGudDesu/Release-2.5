@@ -18,10 +18,11 @@ public class CreateUser : MonoBehaviour
     public Text addedText;
 
     //default values
+	private string two = null;
     private string three = null;
     private string four = null;
     private string five = null;
-    private char six;
+    private string six;
 
     //check for important variables being entered
     private Boolean user = false;
@@ -47,6 +48,7 @@ public class CreateUser : MonoBehaviour
     {
         three = input;
         user = true;
+		two = SubmitName.getTeachID ().ToString();
     }
     //add user name to local variable for later use
     private void SubmitFirstName(string input)
@@ -63,13 +65,8 @@ public class CreateUser : MonoBehaviour
     //add user name to local variable for later use
     private void SubmitGrade(string input)
     {
-        if (input.Length < 2)
-        {
-            char[] placeHold = null;
-            placeHold = input.ToCharArray();
-            six = placeHold[0];
+            six = input;
             grad = true;
-        }
 
     }
 
@@ -87,26 +84,27 @@ public class CreateUser : MonoBehaviour
 
                 //direct db connection to where the db is stored in app
                 //and open connection
-                const string connectionString = "URI=file:Assets\\Plugins\\MumboJumbos.db";
+				const String connectionString = "URI=file:Assets\\Plugins\\MumboJumbos.db";
                 IDbConnection dbcon = new SqliteConnection(connectionString);
                 dbcon.Open();
 
                 //create query for adding user
                 IDbCommand dbcmd = dbcon.CreateCommand();
                 String command =
-                "INSERT INTO student " +
+				"INSERT INTO student " +
                 "(TeacherID, StuUserName, FirstName, LastName, Grade) " +
                 "VALUES (@two, @three, @four, @five, @six)";
 
                 //dbcmd.Parameters.Add(new SqliteParameter("@one", one));    
-                dbcmd.Parameters.Add(new SqliteParameter("@two", SubmitName.getTeachID()));
+                dbcmd.Parameters.Add(new SqliteParameter("@two", two));
                 dbcmd.Parameters.Add(new SqliteParameter("@three", three));
                 dbcmd.Parameters.Add(new SqliteParameter("@four", four));
                 dbcmd.Parameters.Add(new SqliteParameter("@five", five));
                 dbcmd.Parameters.Add(new SqliteParameter("@six", six));
-                string sql = command;
-                dbcmd.CommandText = sql;
+
+				dbcmd.CommandText = command;
                 IDataReader reader = dbcmd.ExecuteReader();
+
                 addedText.text = "User Added!";
                 addedText.enabled = true;
                 CheckUsername.updateUserList();
@@ -137,7 +135,7 @@ public class CreateUser : MonoBehaviour
     three = null;
     four = null;
     five = null;
-    six = Convert.ToChar(0);
+    six = null;
 
     //check for important variables being entered
     user = false;
