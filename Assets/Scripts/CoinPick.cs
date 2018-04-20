@@ -48,7 +48,8 @@ public class CoinPick : MonoBehaviour {
         IDbCommand dbcmd = dbcon.CreateCommand();
         const string sql =
             "SELECT * " +
-            "FROM wordList";
+            "FROM wordList " +
+			"WHERE wordList.Difficulty like '%E%'";
         dbcmd.CommandText = sql;
         IDataReader reader = dbcmd.ExecuteReader();
 
@@ -76,7 +77,8 @@ public class CoinPick : MonoBehaviour {
         IDbCommand dbcmd = dbcon.CreateCommand();
         const string sql =
             "SELECT * " +
-            "FROM wordListM";
+            "FROM wordList " +
+			"WHERE Difficulty like '%M%'";
         dbcmd.CommandText = sql;
         IDataReader reader = dbcmd.ExecuteReader();
 
@@ -104,7 +106,8 @@ public class CoinPick : MonoBehaviour {
         IDbCommand dbcmd = dbcon.CreateCommand();
         const string sql =
             "SELECT * " +
-            "FROM wordListH";
+            "FROM wordList " +
+			"WHERE Difficulty like '%H%'";
         dbcmd.CommandText = sql;
         IDataReader reader = dbcmd.ExecuteReader();
 

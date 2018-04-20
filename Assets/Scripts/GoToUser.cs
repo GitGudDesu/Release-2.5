@@ -23,5 +23,14 @@ public class GoToUser : MonoBehaviour
 		SceneManager.LoadScene("AddUser");
 	}
 
+	public void ToWordEdit()
+	{
+		SceneManager.LoadScene("AddWord");
+	}
+
+	public void ToRemoveUser()
+	{
+		SceneManager.LoadScene("RemoveUser");
+	}
 
 }

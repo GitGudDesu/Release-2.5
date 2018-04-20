@@ -21,7 +21,7 @@ public class AddWord : MonoBehaviour
 	private string three = null;
 	private string four = null;
 	private string five = null;
-	private char six;
+	private string six;
 
 	//check for important variables being entered
 	private Boolean user = false;
@@ -63,11 +63,10 @@ public class AddWord : MonoBehaviour
 	//add user name to local variable for later use
 	private void SubmitGrade(string input)
 	{
-		if (input.Length < 2)
-		{
-			six = input.ToCharArray()[0];
-			grad = true;
-		}
+
+		six = input;
+		grad = true;
+	
 
 	}
 
@@ -135,7 +134,7 @@ public class AddWord : MonoBehaviour
 		three = null;
 		four = null;
 		five = null;
-		six = Convert.ToChar(0);
+		six = null;
 
 		//check for important variables being entered
 		user = false;

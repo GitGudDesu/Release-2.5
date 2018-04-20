@@ -1042,13 +1042,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 859451308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f912d2634e386564d8f96a671e1915d6, type: 3}
+  m_Script: {fileID: 11500000, guid: d5a1cfe000f1a8e4a86136fc79e0b561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StudentUserName: {fileID: 346601518}
-  FirstName: {fileID: 331982681}
-  LastName: {fileID: 963714269}
-  Grade: {fileID: 1990297278}
+  SetID: {fileID: 331982681}
+  Word: {fileID: 963714269}
+  Difficulty: {fileID: 1990297278}
+  Grade: {fileID: 346601518}
   addButton: {fileID: 859451311}
   addedText: {fileID: 257208786}
 --- !u!114 &859451311
