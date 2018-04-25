@@ -38,6 +38,7 @@ public class SubmitName : MonoBehaviour
 	}
 	public static int getStuID()
 	{
+		Score.setID (currStuID);
 		return currStuID;
 	}
 	public static String getStuGrade()

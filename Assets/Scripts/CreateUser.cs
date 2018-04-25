@@ -110,12 +110,14 @@ public class CreateUser : MonoBehaviour
                 CheckUsername.updateUserList();
                 LastName.text = "";
                 Grade.text = "";
+				FirstName.text = "";
+				StudentUserName.text = "";
 
             }
             else
             {
                 SceneManager.LoadScene("AddUser");
-                Reset();
+                //Reset();
             }
 
         }

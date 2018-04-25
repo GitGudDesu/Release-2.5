@@ -33,4 +33,9 @@ public class GoToUser : MonoBehaviour
 		SceneManager.LoadScene("RemoveUser");
 	}
 
+	public void ToTeacherMenu()
+	{
+		SceneManager.LoadScene("TeacherMenu");
+	}
+
 }

@@ -100,6 +100,7 @@ public class AddWord : MonoBehaviour
 				dbcmd.Parameters.Add(new SqliteParameter("@four", five));
 				dbcmd.Parameters.Add(new SqliteParameter("@five", SubmitName.getTeachID()));
 				dbcmd.Parameters.Add(new SqliteParameter("@six", six));
+
 				string sql = command;
 				dbcmd.CommandText = sql;
 				IDataReader reader = dbcmd.ExecuteReader();
