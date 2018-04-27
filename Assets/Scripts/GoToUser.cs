@@ -38,4 +38,14 @@ public class GoToUser : MonoBehaviour
 		SceneManager.LoadScene("TeacherMenu");
 	}
 
+    public void ToLeaderboards()
+    {
+        SceneManager.LoadScene("ScoreBoard");
+    }
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
 }
