@@ -135,7 +135,7 @@ public class CharacterControl : MonoBehaviour
 				CoinPick.currentLetterIndex++;
 
 				//give a score boost
-				Score.score++;
+				Score.score = Score.score + 5;
 
 				//check if word was spelled and then reset CoinPick indexes
 				//while maintaining the word index
@@ -148,7 +148,7 @@ public class CharacterControl : MonoBehaviour
 
 					//this if statement checks to see how fast a player spelled a word
 					//if fast enough we give them a score bonus
-					if ((CoinPick.wordEndCount - CoinPick.wordStartCount) <= (CoinPick.currentWord.Length + 1)) {
+					if ((CoinPick.wordEndCount - CoinPick.wordStartCount) <= (CoinPick.currentWord.Length * 2)) {
 						Score.score = Score.score + 10;
                     }
 				}
