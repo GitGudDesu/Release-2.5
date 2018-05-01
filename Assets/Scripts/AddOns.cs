@@ -21,7 +21,7 @@ public class AddOns : MonoBehaviour {
         if (intCoin > 20) {
             print(intCoin);
             DeductData("student", "StuID", SubmitName.getStuID(), "Coin", 20);
-            butt.transform.localScale += new Vector3(1, 1, 1);
+            butt.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
         }
     }
 
