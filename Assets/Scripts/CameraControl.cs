@@ -11,8 +11,8 @@ public class CameraControl : MonoBehaviour
 
 
     private float transition = 0.0f;
-    private float animationDuration = 3.0f;
-    private Vector3 animationOffset = new Vector3(0, 5, 5);
+    private float animationDuration = 3f;
+    private Vector3 animationOffset = new Vector3(3, 5, 5);
 
     // Use this for initialization
     void Start()
@@ -27,7 +27,7 @@ public class CameraControl : MonoBehaviour
     {
         moveVector = lookAt.position + startOffset;
         //x
-        moveVector.x = 0;
+        moveVector.x = 1;
         //y
         moveVector.y = Mathf.Clamp(moveVector.y, 2, 5);
 
